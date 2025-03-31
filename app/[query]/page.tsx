@@ -5,9 +5,9 @@ import { Icon } from "@/interfaces/Icon";
 export default async function Result({
   params,
 }: {
-  params: { query: string };
+  params: Promise<{ query: string }>;
 }) {
-  const { query } = params;
+  const { query } = await params;
   const rawData = await fetch(
     `https://api.iconfinder.com/v4/icons/search?query=${query}&count=30`,
     {
