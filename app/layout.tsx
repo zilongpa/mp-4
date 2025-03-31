@@ -1,3 +1,4 @@
+import StyledComponentsRegistry from "@/lib/registry";
 import Header from "@/components/Header";
 import React from "react";
 
@@ -9,8 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <StyledComponentsRegistry>
+          <Header />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
