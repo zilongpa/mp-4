@@ -7,7 +7,7 @@ export default async function Result({
 }: {
   params: { query: string };
 }) {
-  const { query } = await params;
+  const { query } = params;
   const rawData = await fetch(
     `https://api.iconfinder.com/v4/icons/search?query=${query}&count=30`,
     {
